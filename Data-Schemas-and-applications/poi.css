@@ -1,0 +1,325 @@
+/* POI.PHP styling */
+
+body{
+    min-width: 280px;
+    font-family:" open sans", sans-serif;
+    text-align: justify;
+}
+#rss{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    margin-left: 20px auto;
+}
+h1{
+    text-align: center;
+    font-size: 3em;
+    margin-top:10px;
+    margin-bottom: 0;
+}
+h2{
+    text-align: center;
+    font-size: 1.3em;
+    color: black;
+}
+h3{
+    text-align: center;
+    font-size: 1em;
+}
+
+#poi{
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    margin: 0!important;
+    padding: 0!important;
+    flex-wrap: wrap;
+    border: 1.5px solid grey!important;
+}
+#tf{
+    display: flex;
+    flex-wrap: wrap;
+}
+#input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#tweets{
+    width: 49.9%;
+    text-align: center;    
+    border-right: 0.1px solid grey;    
+}
+#flickr{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+            /*responsive css*/
+
+/*4k monitors min-width: 1129px */
+@media (min-width: 1501px){
+    #rss img{
+  
+        width: 40px;
+        height: 40px;
+    }
+    #homeBtn{
+        width:10vw;
+        font-size:1.2vw;
+        border-radius: 40%;
+    }
+    #homeBtn:hover{
+        background-color: grey;
+    }
+    #description, label{
+        font-size: 20px;
+    }
+    h1{
+       font-size:31px;
+   }
+   h2{
+       font-size: 26px;
+   }
+   h3{
+       font-size: 23px;
+   }
+   #flickr img{
+       width: 40vw;
+       height: 90vh;
+   }
+   #tweets, .details, #flickr{
+       font-size: 20px;
+   }
+   #comments h3, #photos h3{
+       text-align: left!important;
+   }
+}
+/*Large Laptops */
+@media (max-width: 1500px){
+    #homeBtn{
+        width:10vw;
+        font-size:1.2vw;
+        border-radius: 40%;
+    }
+    #homeBtn:hover{
+        background-color: grey;
+    }
+    #description, label{
+        font-size: 18px;
+    }
+    h1{
+       font-size:25px;
+   }
+   h2{
+       font-size: 22px;
+   }
+   #flickr img{
+    width: 40vw;
+   }
+   #tweets, .details, #Input, #flickr{
+       font-size: 18px;
+   }
+   #input{
+       text-align: left;
+   }
+   #photos h3{
+       text-align: left;
+    
+   }
+}
+
+/*Medium Laptops max-width:1128*/
+@media (max-width: 1128px){
+    #homeBtn{
+        width:13.5vw;
+        font-size:1.5vw;
+        border-radius: 40%;
+        margin-left: 5px;
+    }
+    #description, #tweets, #flickr, .details, label{
+        font-size: 15px;
+    }
+
+   h1{
+       font-size: 23px !important;
+   }
+   h2{
+       font-size: 20px !important;
+   }
+   h3{
+       font-size: 17px !important;
+   }
+}
+@media(max-width: 832px){
+    #homeBtn{
+        width:17vw;
+        font-size:2vw;
+        border-radius: 40%;
+    }
+    #poi{
+        width: 100%!important;
+    }
+   #flickr img{
+    width: 60vw;
+   }
+    #tf, #input{
+
+        width: 100vw !important;
+        text-align: center;
+    }
+
+    #tf{
+        flex-direction: row;
+    }
+    #tf div{
+        width: 90%;
+    }
+    #tweets, #flickr{
+
+        width: 95% !important;
+        text-align: center;
+    }
+    #input{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #comments{
+        width: 99%;
+    }
+    #parPhoto{
+        padding-left: 50px;
+       
+    }
+    #uploadForm{
+        flex-direction: column;
+        width:732px;
+    }
+    #uploadForm div{
+        justify-content: right ;
+    }
+    #imagefile{
+        width: fit-content;
+    }
+    #photos p{
+        text-align: center;
+    }
+    .upload {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        padding-left: 50px;
+        
+    }
+    #tweets{
+        border-bottom: 0.1px solid grey;    
+    }
+}
+
+@media (max-width: 568px){
+    #homeBtn{
+        width:22vw;
+        font-size:1.5vw;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+    #description, #tweets, #flickr, .details, label{
+        font-size: 12px;
+    }
+    #rss img{
+        width: 17px;
+        height: 17px;
+    }
+
+   h1{
+       font-size: 19px !important;
+   }
+   h2{
+       font-size: 15px !important;
+   }
+   h3{
+       font-size: 13px !important;
+       text-align: center;
+   }
+   #tweets, #flickr{
+
+    width: 95% !important;
+    text-align: center;
+}
+   #flickr img{
+    width: 80vw;
+   }
+   .upload{
+       display: flex;
+       flex-direction: row;
+       justify-content: flex-start;
+       text-align: left!important;
+   }
+   #comments h3, #photos h3{
+       text-align: center; 
+   }
+   #photos label{
+       padding-right: 4px
+   }
+}
+@media (max-width: 368px){
+    #homeBtn{
+        width:22vw;
+        font-size:10px;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+
+    #description, #tweets, #flickr, .details, label {
+        font-size: 10px;
+    }
+    #rss img{
+        width: 15px;
+        height: 15px;
+    }
+
+   h1{
+       font-size: 16px !important;
+   }
+   h2{
+       font-size: 14px !important;
+   }
+   h3{
+       font-size: 12px !important;
+       text-align: center;
+   }
+   #poi{
+    width: 100% !important
+    margin: 0;
+    border: 0;
+   }
+   #tf, #input{
+    width: 100% !important;
+    }
+   #tweets, #flickr{
+
+    width: 100% !important;
+    text-align: center;
+}
+   #flickr img{
+    width: 80vw;
+   }
+   .upload{
+       display: flex;
+       flex-direction: row;
+       justify-content: flex-start;
+       text-align: left!important;
+   }
+   #comments h3, #photos h3{
+       text-align: center; 
+   }
+   #photos label{
+       padding-right: 4px
+   }
+}

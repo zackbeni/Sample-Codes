@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <!-- 
+    ==================================================================
+    This is the schema for the assignment group xml file.
+    See Z-04.xml file for a valid example instance. 
+    Ensure your group_metafile.xml is validated against this schema 
+    using Oxygen or some other validator.
+ 
+    DO NOT EDIT OR CHANGE THIS FILE UNDER ANY CIRCUMSTANCES 
+    ==================================================================
+  Version 1.4
+  -->
+
+  <!-- element definitions - adopts the russian 
+    doll approach with only one top level element -->
+  <xs:element name="group-xml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="module">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="title" type="titleType"/>
+              <xs:element name="year" type="yearType"/>
+              <xs:element name="hand_in" type="hand_inDate"/>
+              <xs:element name="spec_url" type="urlType"/>
+            </xs:sequence>
+            <xs:attribute name="acronymn" use="required" type="module_acronymnType"/>
+            <xs:attribute name="id" use="required" type="module_idType"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="group">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="member" minOccurs="3" maxOccurs="4">
+                <xs:complexType>
+                  <xs:attribute name="id" use="required" type="student_idType"/>
+                  <xs:attribute name="name" use="required" type="nameType"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="workshop">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="daytime" type="daytimeType"/>
+                    <xs:element name="tutor" type="tutorType" minOccurs="2" maxOccurs="2"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="component" minOccurs="4" maxOccurs="12">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="contributor" minOccurs="1" maxOccurs="4">
+                      <xs:complexType>
+                        <xs:attribute name="id" use="required" type="student_idType"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="description" type="txtType"/>
+                    <xs:element name="problems" type="txtType"/>
+                    <xs:element name="solutions" type="txtType"/>
+                    <xs:element name="hours_effort" type="hours_effortType"/>
+                  </xs:sequence>
+                  <xs:attribute name="type" use="required" type="gcomponentType"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" use="required" type="group_idType"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="application">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="technologies">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="tech" minOccurs="3" maxOccurs="24" type="techType"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="source_files">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="file" minOccurs="1" maxOccurs="12">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="name" type="xs:string"/>
+                          <xs:element name="purpose" type="xs:string"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="overall_comments" type="txtType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Type definitions -->
+  <!-- element types -->
+  <xs:simpleType name="titleType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="Data Schemas &amp; Applications"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="yearType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="2021-22"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="hand_inDate">
+    <xs:restriction base="xs:date">
+      <xs:pattern value="2022-03-03"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="urlType">
+    <xs:restriction base="xs:anyURI">
+      <xs:pattern
+        value="https://fetstudy.uwe.ac.uk/~p-chatterjee/2021-22/modules/dsa/assignment/" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nameType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="5"/>
+      <xs:maxLength value="24"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="daytimeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Friday 10:00"/>
+      <xs:enumeration value="Friday 13:30"/>
+      <xs:enumeration value="Friday 15:00"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tutorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="JH"/>
+      <xs:enumeration value="PC"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="txtType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="80"/>
+      <xs:maxLength value="5000"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="hours_effortType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="120"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="techType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="php"/>
+      <xs:enumeration value="xml"/>
+      <xs:enumeration value="xslt"/>
+      <xs:enumeration value="xsd"/>
+      <xs:enumeration value="html5"/>
+      <xs:enumeration value="css"/>
+      <xs:enumeration value="javascript"/>
+      <xs:enumeration value="json"/>
+      <xs:enumeration value="mysql"/>
+      <xs:enumeration value="sql"/>
+      <xs:enumeration value="rss"/>
+      <xs:enumeration value="other"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--- end of element types -->
+
+  <!-- attribute types -->
+  <xs:simpleType name="module_idType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="UFCFV4-30-2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="module_acronymnType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="DSA"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="gcomponentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Map"/>
+      <xs:enumeration value="Weather"/>
+      <xs:enumeration value="Database Design"/>
+      <xs:enumeration value="Database Implementation"/>
+      <xs:enumeration value="XML Configuration File &amp; Schema "/>
+      <xs:enumeration value="RSS Feed"/>
+      <xs:enumeration value="Group XML File Construction"/>
+      <xs:enumeration value="HTML Design &amp; Markup"/>
+      <xs:enumeration value="CSS Design"/>
+      <xs:enumeration value="PHP Coding"/>
+      <xs:enumeration value="Javascript / JSON Coding"/>
+      <xs:enumeration value="XML Markup"/>
+      <xs:enumeration value="XSD Design"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="group_idType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="A-01"/>
+      <xs:enumeration value="B-02"/>
+      <xs:enumeration value="C-02"/>
+      <xs:enumeration value="D-03"/>
+      <xs:enumeration value="E-01"/>
+      <xs:enumeration value="F-03"/>
+      <xs:enumeration value="G-01"/>
+      <xs:enumeration value="H-01"/>
+      <xs:enumeration value="I-03"/>
+      <xs:enumeration value="J-03"/>
+      <xs:enumeration value="K-03"/>
+      <xs:enumeration value="L-03"/>
+      <xs:enumeration value="M-01"/>
+      <xs:enumeration value="N-03"/>
+      <xs:enumeration value="O-02"/>
+      <xs:enumeration value="P-01"/>
+      <xs:enumeration value="Q-03"/>
+      <xs:enumeration value="R-02"/>
+      <xs:enumeration value="S-01"/>
+      <xs:enumeration value="T-02"/>
+      <xs:enumeration value="U-02"/>
+      <xs:enumeration value="V-03"/>
+      <xs:enumeration value="W-01"/>
+      <xs:enumeration value="Z-04"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="student_idType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--- end of attribute types -->
+</xs:schema>
+<!-- DSA Assignment Group Schema File, 2021-22 -->
+<!-- author: prakash.chatterjee@uwe.ac.uk -->

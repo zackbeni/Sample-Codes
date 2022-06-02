@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group-xml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="group_schema.xsd">
+    <module acronymn="DSA" id="UFCFV4-30-2">
+        <title>Data Schemas &amp; Applications</title>
+        <year>2021-22</year>
+        <hand_in>2022-03-03</hand_in>
+        <spec_url>https://fetstudy.uwe.ac.uk/~p-chatterjee/2021-22/modules/dsa/assignment/</spec_url>
+    </module>
+    <group id="G-01">
+        <member id="20027198" name="Findlay Box"/>
+        <member id="20009976" name="Reece Nicholls"/>
+        <member id="20023997" name="Anour Taylor"/>
+        <member id="19000214" name="Isaac Nzayisenga Dushime"/>
+        <workshop>
+            <daytime>Friday 10:00</daytime>
+            <tutor>PC</tutor>
+            <tutor>JH</tutor>
+        </workshop>
+        <component type="Map">
+            <contributor id="20009976"/>
+            <contributor id="20027198"/>
+            <contributor id="19000214"/>
+            <contributor id="20023997"/>
+            <description>Made use of openweather api to display London and New York City's maps using their respective
+                coordinates stored in the database.
+            </description>
+            <problems>One problem we had was the poi pop ups moving the map so that other markers were not in view.
+                This problem was especially present as we had disabled some of the map scrolling functions to prevent user error.</problems>
+            <solutions>The solution to the map scroll was to disable touch and click zoom, leaving the manual control available 
+                in the instance that the pop up mozved the map too much, we also left drag option turned on to help.</solutions>
+            <hours_effort>60</hours_effort>
+        </component>
+        <component type="Weather">
+            <contributor id="20009976"/>
+            <contributor id="20023997"/>
+            <description>Pull in weather data via a weather API for both cities, display a current and 5 day forecast.</description>
+            <problems>one main problem was crunching through the data to know what we needed to display and what we didn't.</problems>
+            <solutions>Using documentation we were able to understand which data was needed or most useful.</solutions>
+            <hours_effort>15</hours_effort>
+        </component>
+        <component type="Database Design">
+            <contributor id="20009976"/>
+            <contributor id="19000214"/>
+            <contributor id="20027198"/>
+            <contributor id="20023997"/>
+            <description>The component was about designing the conceptual model of our database, transform it to develop the logical model
+                resolving any many-to-many relationships showing all Primary and Foreign Keys as well as all attribute types with their ranges/lengths. </description>
+            <problems>One problem we faced on this component was that a particular POI could have the potential to fall under mutliple Categories hence we couldn't make use a one-to-many relationship.</problems>
+            <solutions>The solution to this was to use a join table to connect the POI table and the Category table, called POI_Category table, and that way we can implement a many-to-many relationship in our relational database.</solutions>
+            <hours_effort>5</hours_effort>
+        </component>
+        <component type="Database Implementation">
+            <contributor id="20009976"/>
+            <description>Create the database on the MySQL server and populate the tables with information/data.</description>
+            <problems>When forward engineering the database from MySQL Workbench into the MariaDB, the generated SQL code had a keyword called "VISIBLE" which is not currently supported on MariaDB, it is a MySQL keyword.
+                Making changes to the database structure/datatypes whilst the tables contained records meant that we couldn't run the newly generated SQL code otherwise it would overwrite the table.
+            </problems>
+            <solutions>To solve the "VISIBLE" issue, simply removing the word fixed the error. MariaDB indexes are visible by default anyway, and is a special MySQL keyword.
+                To change the structures/datatypes we had to carefully examine the SQL code and find the lines which create the tables, rewrite the lines so that it will alter the table to suit the new requirements without creating/overwritting the whole table again.
+            </solutions>
+            <hours_effort>5</hours_effort>
+        </component>
+        <component type="XML Configuration File &amp; Schema ">
+            <contributor id="00000000"/>
+            <contributor id="20027198"/>
+            <contributor id="20023997"/>
+            <description>Construct a config file, store settings for database and API's used throughout the application</description>
+            <problems>not understanding the way the application ran, in terms of execution order sometimes led to problems when placing API keys in the config file. </problems>
+            <solutions>lots of testing and debugging helped us to be able to identify how the application ran and where we needed to include certain things.</solutions>
+            <hours_effort>5</hours_effort>
+        </component>
+        <component type="RSS Feed">
+            <contributor id="20009976"/>
+            <contributor id="19000214"/>
+            <contributor id="20027198"/>
+            <description>The component is about generating an RSS feed that show all the current data about London and New York cities and their respective places of interest currently held in the database. The RSS feed generated also
+                reflects any changes made on the chosen cities and points of interests on a last in first shown basis.
+            </description>
+            <problems>One of the problems we encountered was that the characters such as ampersand, single and double quotes in cities and points of interest's descriptions
+                were causing errors in the RSS generation
+            </problems>
+            <solutions>To solve the problem we made use of cdata and character replacement to prevent the errors</solutions>
+            <hours_effort>8</hours_effort>
+        </component>
+        <component type="Group XML File Construction">
+            <contributor id="20009976"/>
+            <contributor id="19000214"/>
+            <contributor id="20027198"/>
+            <contributor id="20023997"/>
+            <description>Construct an XML file from provided schema, detailing the work completed during the assignment.</description>
+            <problems>We didn't really face any problem in terms of the xml language. The only issue we had was collaborating on this together, rather than crowding around one screen</problems>
+            <solutions>The solution for the collaboration issue was to make use of the liveshare feature within the visual studio Code and it allowed us to complete quickly </solutions>
+            <hours_effort>5</hours_effort>
+        </component>
+        <component type="HTML Design &amp; Markup">
+            <contributor id="20009976"/>
+            <contributor id="19000214"/>
+            <contributor id="20027198"/>
+            <contributor id="20023997"/>
+            <description>This component was about writing markups and make ensuring that they properly conform to HTML5 standards.</description>
+            <problems>When incorporating CSS Grid, we discovered that our div tags/grid areas were not properly named.</problems>
+            <solutions>In order to overcome the problem, we gave all the div tags class attributes to easily target and style them accordingly.</solutions>
+            <hours_effort>10</hours_effort>
+        </component>
+        <component type="CSS Design">
+            <contributor id="19000214"/>
+            <contributor id="20023997"/>
+            <description>Styled the presentation of the data, and optimised the appearance of the API's,
+                in order to make the page more attractive and user friendly.</description>
+            <problems>The maps caused issues as they wouldn't respond to simply being put in containers.
+                Also the Flickr images on the POI page were jumbled up and stuck together</problems>
+            <solutions>Using CSS Grid we were able to separate content, isolate containers using classes and style each one accordingly.
+                This enabled us to add the padding needed to the maps, and to separate and order the flickr photos a bit better.</solutions>
+            <hours_effort>10</hours_effort>
+        </component>
+        <component type="PHP Coding">
+            <contributor id="20009976"/>
+            <contributor id="19000214"/>
+            <contributor id="20027198"/>
+            <contributor id="20023997"/>
+            <description>Use PHP to handle requests on the server and to produce HTML for the client. Interacts with database to fetch data and echo out as HTML in a readable format.</description>
+            <problems>There were occasions that the PHP was attempting to execute without the variables we would have gained from user interaction through javascript.</problems>
+            <solutions>We used debugger to find out where the program was executing without variables and asdjusted our code accordingly</solutions>
+            <hours_effort>20</hours_effort>
+        </component>
+        <component type="Javascript / JSON Coding">
+            <contributor id="20009976"/>
+            <contributor id="20027198"/>
+            <contributor id="20023997"/>
+            <description>When implementing certain features such as the map, use javascript to optimise appearance and functionality.</description>
+            <problems>There were issues with the map scroll and zoom that needed to be overcome, also the ability to open a new window on a click.</problems>
+            <solutions>Review documentation from leaflet as to how to use attributes and map controls, and then research javascript methods to overcome the window opening.</solutions>
+            <hours_effort>15</hours_effort>
+        </component>
+    </group>
+    <application>
+        <technologies>
+            <tech>php</tech>
+            <tech>xml</tech>
+            <tech>html5</tech>
+            <tech>mysql</tech>
+            <tech>javascript</tech>
+            <tech>css</tech>
+            <tech>rss</tech>
+        </technologies>
+        <source_files>
+            <file>
+                <name>cities.sql</name>
+                <purpose>contains the sql needed to create the database</purpose>
+            </file>
+            <file>
+                <name>config.php</name>
+                <purpose>contains all the settings for database and API's</purpose>
+            </file>
+            <file>
+                <name>functions.php</name>
+                <purpose>contains the functions used throughout the application</purpose>
+            </file>
+            <file>
+                <name>index.php</name>
+                <purpose>main page where city information is displayed</purpose>
+            </file>
+            <file>
+                <name>poi.php</name>
+                <purpose>second page, where all POI information is displayed</purpose>
+            </file>
+            <file>
+                <name>rss.php</name>
+                <purpose>displays all the application data as rss</purpose>
+            </file>
+            <file>
+                <name>scripts.php</name>
+                <purpose>contains the main map script used</purpose>
+            </file>
+            <file>
+                <name>user_comments.php</name>
+                <purpose>contains a feature and form to enable users to post their own comments on a POI</purpose>
+            </file>
+            <file>
+                <name>user_photos.php</name>
+                <purpose>contains a feature and form to enable users to post their own photos of a POI</purpose>
+            </file>
+        </source_files>
+    </application>
+    <overall_comments>This assignment has been both extremely challenging and extremely rewarding,
+        there were times it all felt a bit too much but we are all so grateful for how much we have learned through it.
+        
+        We have furthered our skills in collaborating as a team, especially in a programming environment, using tools such as Git and GitHub to work on the same files.     
+    </overall_comments>
+</group-xml>
