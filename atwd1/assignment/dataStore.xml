@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<requiredCurrencies>
+    <AUD isActive="yes" baseCurrency="GBP">
+        <currencyName>Australian Dollar</currencyName>
+        <at>22 Jan 2022 19:53</at>
+        <timestamp>1642881189</timestamp>
+        <rate/>
+        <oldRate/>
+        <loc>AUSTRALIA, CHRISTMAS ISLAND, COCOS (KEELING) ISLANDS (THE), HEARD ISLAND AND McDONALD ISLANDS, KIRIBATI, NAURU, NORFOLK ISLAND, TUVALU</loc>
+    </AUD>
+    <BRL isActive="yes" baseCurrency="GBP">
+        <currencyName>Brazilian Real</currencyName>
+        <at>20 Jan 2022 19:00</at>
+        <timestamp>1642705211</timestamp>
+        <rate>7.36391</rate>
+        <oldRate>7.689254</oldRate>
+        <loc>BRAZIL</loc>
+    </BRL>
+    <CAD isActive="yes" baseCurrency="GBP" rate="1.70766">
+        <currencyName>Canadian Dollar</currencyName>
+        <at>07 Jan 2022 14:59</at>
+        <timestamp>1641567590</timestamp>
+        <rate>1.721093</rate>
+        <oldRate>1.721093</oldRate>
+        <loc>CANADA</loc>
+    </CAD>
+    <CHF isActive="yes" baseCurrency="GBP">
+        <currencyName>Swiss Franc</currencyName>
+        <at>05 Jan 2022 11:43</at>
+        <timestamp>1641382998</timestamp>
+        <rate>1.239652</rate>
+        <oldRate>1.233566</oldRate>
+        <loc>LIECHTENSTEIN, SWITZERLAND</loc>
+    </CHF>
+    <CNY isActive="yes" baseCurrency="GBP">
+        <currencyName>Yuan Renminbi</currencyName>
+        <at>01 Jan 2022 17:05</at>
+        <timestamp>1641053135</timestamp>
+        <rate>8.607653</rate>
+        <oldRate>NULL</oldRate>
+        <loc>CHINA</loc>
+    </CNY>
+    <DKK isActive="yes" baseCurrency="GBP">
+        <currencyName>Danish Krone</currencyName>
+        <at>07 Jan 2022 17:44</at>
+        <timestamp>1641577473</timestamp>
+        <rate>8.870623</rate>
+        <oldRate>8.841205</oldRate>
+        <loc>DENMARK, FAROE ISLANDS (THE), GREENLAND</loc>
+    </DKK>
+    <EUR isActive="no" baseCurrency="GBP">
+        <currencyName>Euro</currencyName>
+        <at>22 Jan 2022 14:08</at>
+        <timestamp>1642860498</timestamp>
+        <rate>1.194895</rate>
+        <oldRate>1.194895</oldRate>
+        <loc>ÅLAND ISLANDS, ANDORRA, AUSTRIA, BELGIUM, CYPRUS, ESTONIA, EUROPEAN UNION, FINLAND, FRANCE, FRENCH GUIANA, FRENCH SOUTHERN TERRITORIES (THE), GERMANY, GREECE, GUADELOUPE, HOLY SEE (THE), IRELAND, ITALY, LATVIA, LITHUANIA, LUXEMBOURG, MALTA, MARTINIQUE, MAYOTTE, MONACO, MONTENEGRO, NETHERLANDS (THE), PORTUGAL, RÉUNION, SAINT BARTHÉLEMY, SAINT MARTIN (FRENCH PART), SAINT PIERRE AND MIQUELON, SAN MARINO, SLOVAKIA, SLOVENIA, SPAIN</loc>
+    </EUR>
+    <GBP isActive="yes" baseCurrency="GBP">
+        <currencyName>Pound Sterling</currencyName>
+        <at>01 Jan 2022 17:05</at>
+        <timestamp>1641053135</timestamp>
+        <rate>1</rate>
+        <oldRate>NULL</oldRate>
+        <loc>GUERNSEY, ISLE OF MAN, JERSEY, UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND (THE)</loc>
+    </GBP>
+    <HKD isActive="yes" baseCurrency="GBP">
+        <currencyName>Hong Kong Dollar</currencyName>
+        <at>01 Jan 2022 21:01</at>
+        <timestamp>1641070917</timestamp>
+        <rate>10.544968</rate>
+        <oldRate>10.544893</oldRate>
+        <loc>HONG KONG</loc>
+    </HKD>
+    <HUF isActive="yes" baseCurrency="GBP">
+        <currencyName>Forint</currencyName>
+        <at>01 Jan 2022 21:03</at>
+        <timestamp>1641071011</timestamp>
+        <rate>438.000595</rate>
+        <oldRate>437.989382</oldRate>
+        <loc>HUNGARY</loc>
+    </HUF>
+    <INR isActive="yes" baseCurrency="GBP">
+        <currencyName>Indian Rupee</currencyName>
+        <at>01 Jan 2022 20:58</at>
+        <timestamp>1641070696</timestamp>
+        <rate>100.724909</rate>
+        <oldRate>100.725707</oldRate>
+        <loc>BHUTAN, INDIA</loc>
+    </INR>
+    <JPY isActive="yes" baseCurrency="GBP">
+        <currencyName>Yen</currencyName>
+        <at>09 May 2022 23:59</at>
+        <timestamp>1652140799</timestamp>
+        <rate>160.865912</rate>
+        <oldRate>160.865912</oldRate>
+        <loc>JAPAN</loc>
+    </JPY>
+    <MXN isActive="yes" baseCurrency="GBP">
+        <currencyName>Mexican Peso</currencyName>
+        <at>07 Jan 2022 12:51</at>
+        <timestamp>1641559880</timestamp>
+        <rate>27.702645</rate>
+        <oldRate>27.726478</oldRate>
+        <loc>MEXICO</loc>
+    </MXN>
+    <MYR isActive="yes" baseCurrency="GBP">
+        <currencyName>Malaysian Ringgit</currencyName>
+        <at>20 Jan 2022 16:04</at>
+        <timestamp>1642694674</timestamp>
+        <rate>5.707918</rate>
+        <oldRate>5.738392</oldRate>
+        <loc>MALAYSIA</loc>
+    </MYR>
+    <NOK isActive="yes" baseCurrency="GBP">
+        <currencyName>Norwegian Krone</currencyName>
+        <at>01 Jan 2022 17:05</at>
+        <timestamp>1641053135</timestamp>
+        <rate>11.893321</rate>
+        <oldRate>NULL</oldRate>
+        <loc>BOUVET ISLAND, NORWAY, SVALBARD AND JAN MAYEN</loc>
+    </NOK>
+    <NZD isActive="yes" baseCurrency="GBP">
+        <currencyName>New Zealand Dollar</currencyName>
+        <at>01 Jan 2022 17:05</at>
+        <timestamp>1641053135</timestamp>
+        <rate>1.977398</rate>
+        <oldRate>NULL</oldRate>
+        <loc>COOK ISLANDS (THE), NEW ZEALAND, NIUE, PITCAIRN, TOKELAU</loc>
+    </NZD>
+    <PHP isActive="yes" baseCurrency="GBP">
+        <currencyName>Philippine Peso</currencyName>
+        <at>23 Jan 2022 01:35</at>
+        <timestamp>1642901709</timestamp>
+        <rate>69.471751</rate>
+        <oldRate>69.034689</oldRate>
+        <loc>PHILIPPINES (THE)</loc>
+    </PHP>
+    <RUB isActive="yes" baseCurrency="GBP">
+        <currencyName>Russian Ruble</currencyName>
+        <at>23 Jan 2022 01:40</at>
+        <timestamp>1642902043</timestamp>
+        <rate>104.98414</rate>
+        <oldRate>101.104894</oldRate>
+        <loc>RUSSIAN FEDERATION (THE)</loc>
+    </RUB>
+    <SEK isActive="yes" baseCurrency="GBP">
+        <currencyName>Swedish Krona</currencyName>
+        <at>01 Jan 2022 17:05</at>
+        <timestamp>1641053135</timestamp>
+        <rate>12.229968</rate>
+        <oldRate>NULL</oldRate>
+        <loc>SWEDEN</loc>
+    </SEK>
+    <SGD isActive="yes" baseCurrency="GBP">
+        <currencyName>Singapore Dollar</currencyName>
+        <at>20 Jan 2022 19:59</at>
+        <timestamp>1642708769</timestamp>
+        <rate>1.834151</rate>
+        <oldRate>1.834151</oldRate>
+        <loc>SINGAPORE</loc>
+    </SGD>
+    <THB isActive="yes" baseCurrency="GBP">
+        <currencyName>Baht</currencyName>
+        <at>23 Jan 2022 02:20</at>
+        <timestamp>1642904416</timestamp>
+        <rate>44.651377</rate>
+        <oldRate>44.651377</oldRate>
+        <loc>THAILAND</loc>
+    </THB>
+    <TRY isActive="yes" baseCurrency="GBP">
+        <currencyName>Turkish Lira</currencyName>
+        <at>23 Jan 2022 02:24</at>
+        <timestamp>1642904648</timestamp>
+        <rate>18.182818</rate>
+        <oldRate>18.182818</oldRate>
+        <loc>TURKEY</loc>
+    </TRY>
+    <USD isActive="yes" baseCurrency="GBP">
+        <currencyName>US Dollar</currencyName>
+        <at>22 Jan 2022 19:45</at>
+        <timestamp>1642880757</timestamp>
+        <rate>1.355509</rate>
+        <oldRate>1.356576</oldRate>
+        <loc>AMERICAN SAMOA, BONAIRE, SINT EUSTATIUS AND SABA, BRITISH INDIAN OCEAN TERRITORY (THE), ECUADOR, EL SALVADOR, GUAM, HAITI, MARSHALL ISLANDS (THE), MICRONESIA (FEDERATED STATES OF), NORTHERN MARIANA ISLANDS (THE), PALAU, PANAMA, PUERTO RICO, TIMOR-LESTE, TURKS AND CAICOS ISLANDS (THE), UNITED STATES MINOR OUTLYING ISLANDS (THE), UNITED STATES OF AMERICA (THE), VIRGIN ISLANDS (BRITISH), VIRGIN ISLANDS (U.S.)</loc>
+    </USD>
+    <ZAR isActive="yes" baseCurrency="GBP">
+        <currencyName>Rand</currencyName>
+        <at>23 Jan 2022 01:42</at>
+        <timestamp>1642902177</timestamp>
+        <rate>20.458914</rate>
+        <oldRate>20.458914</oldRate>
+        <loc>LESOTHO, NAMIBIA, SOUTH AFRICA</loc>
+    </ZAR>
+</requiredCurrencies>
